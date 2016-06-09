@@ -1,0 +1,1 @@
+window.nameReg = require('./index');

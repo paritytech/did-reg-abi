@@ -11,12 +11,9 @@ module.exports = function nameReg(web3, nameRegAddress) {
         getRegistryPrimary: function () {
           return zero;
         },
-        registry: function () {
-          return [];
-        },
         reverseRegistry: function () {
-          return [];
-        }
+          return null;
+        },
       };
     } 
 
@@ -27,9 +24,6 @@ module.exports = function nameReg(web3, nameRegAddress) {
       contract: contract,
       getRegistryPrimary: function () {
         return contract.getRegistryPrimary.apply(contract, arguments);
-      },
-      registry: function () {
-        return contract.registry.apply(contract, arguments);
       },
       reverseRegistry: function () {
         return contract.reverseRegistry.apply(contract, arguments);

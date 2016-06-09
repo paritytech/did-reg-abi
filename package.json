@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "browserify ./global.js -o ./bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ethcore/did-reg-abi/issues"
   },
-  "homepage": "https://github.com/ethcore/did-reg-abi#readme"
+  "homepage": "https://github.com/ethcore/did-reg-abi#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
 }
