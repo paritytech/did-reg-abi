@@ -1,0 +1,20 @@
+{
+  "name": "did-reg-abi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethcore/did-reg-abi.git"
+  },
+  "keywords": [],
+  "author": "Ethcore <admin@ethcore.io>",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/ethcore/did-reg-abi/issues"
+  },
+  "homepage": "https://github.com/ethcore/did-reg-abi#readme"
+}
