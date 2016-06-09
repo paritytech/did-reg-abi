@@ -11,9 +11,9 @@ module.exports = function nameReg(web3, nameRegAddress) {
         getRegistryPrimary: function () {
           return zero;
         },
-        reverseRegistry: function () {
-          return null;
-        },
+        getReverseRegistry: function () {
+          return '';
+        }
       };
     } 
 
@@ -25,9 +25,13 @@ module.exports = function nameReg(web3, nameRegAddress) {
       getRegistryPrimary: function () {
         return contract.getRegistryPrimary.apply(contract, arguments);
       },
-      reverseRegistry: function () {
-        return contract.reverseRegistry.apply(contract, arguments);
-      },
+      getReverseRegistry: function () {
+        var hex = contract.reverseRegistry.apply(contract, arguments);
+        return hex.substr(2).replace(/.{2}/g, function (v) {
+          if (v == '00') return '';
+          return String.fromCharCode(parseInt(v, 16));
+        });
+      }
     };
 }
 
